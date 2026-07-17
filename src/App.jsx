@@ -43,9 +43,9 @@ function App() {
         </div>
         <div className='show-text'>
           {todos.map((todo) => (
-            <div>
-            <p key={todo.id}>{todo.name}</p>
-            <button onClick={copyTodoText(todo.name)}>Copy Text</button>
+            <div key={todo.id}> {/* 👈 Key goes here */}
+              <p>{todo.name}</p>
+              <button onClick={() => copyTodoText(todo.name)}>Copy Text</button>
             </div>
           ))}
         </div>
