@@ -113,3 +113,16 @@ button:active {
   background: #e5e7eb;
   border-radius: 10px;
 }
+.logo{
+    width:120px;
+    height:120px;
+    object-fit:contain;
+    display:block;
+    margin:0 auto 15px;
+    filter:drop-shadow(0 0 15px rgba(255,0,0,.6));
+    transition:.3s;
+}
+
+.logo:hover{
+    transform:scale(1.05);
+}

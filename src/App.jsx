@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { supabase } from './utils/supabase'
-
+import logo from '../public/nobgLogo.png'
 function App() {
   const [text, setText] = useState("")
   const [loading, setLoading] = useState(false)
@@ -35,7 +35,12 @@ function App() {
     <div>
       <main className="container">
         <div className="share-box">
-          <h2>Every Share</h2>
+          <img
+            src={logo}
+            alt="Every Code Share Logo"
+            className="logo"
+          />
+          <h2>Every Code Share</h2>
           <textarea placeholder="Type Text Here.." onChange={(e) => setText(e.target.value)}></textarea>
           <button onClick={InsertData}>{loading ? "Saving" : "Save"}</button>
           <br />
